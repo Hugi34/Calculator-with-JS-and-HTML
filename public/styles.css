@@ -1,0 +1,97 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.app {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+}
+.calculator{
+background-color: hsl(56, 38%, 58%);
+width: 100%;
+max-width: 375px;
+min-height: 640px;
+display: flex;
+flex-direction: column;
+border-radius: 1.5rem;
+overflow: hidden;
+}
+.display{
+    min-height: 200px;
+    padding: 1.5rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    color: hsl(0, 0%, 100%);
+    text-align: right;
+    flex: 1 1 0%;
+}
+
+.display .input{
+    font-size: 2rem;
+    font-weight: 700;
+    max-width: 100%;
+    overflow: auto;
+
+}
+
+.display .output{
+    font-size: 2rem;
+    font-weight: 700;
+    max-width: 100%;
+    overflow: auto;
+}
+.display .opperator{
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: hsl(236, 38%, 58%);
+
+}
+.display .brackets,
+.display .percent {
+    color: hsl(236, 38%, 58%);
+}
+.keys{
+background-color: hsl(54, 62%, 67%);
+padding: 1.5rem;
+border-radius: 1.5rem 1.5rem 0 0;
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+grid-gap: 1rem;
+box-shadow: 0px -1px 8px hsl(0, 0%, 0%);
+}
+.keys .key{
+    position: relative;
+    cursor: pointer;
+    display: block;
+    height: 0;
+    padding-top: 100%;
+    background-color: hsl(54, 41%, 56%);
+    border-radius: 1rem;
+    transition: .2s;
+    user-select: none;
+}
+.keys .key span{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+    font-weight: 600;
+}
+.keys .key:hover {
+    background-color: hsl(236, 38%, 58%);
+}
+.keys .key.operator span{
+    color: hsl(236, 38%, 58%);
+}
+
+.keys .key.back span{
+    color: #ff3c00;
+}
